@@ -12,4 +12,5 @@ class ElComercioSpider(scrapy.Spider):
         for new in response.css(".f-detalle"):
             item = NewItem()
             item['title'] = new.css("h2 a::text").extract()
+            item['description'] = new.css("p::text").extract()
             yield item

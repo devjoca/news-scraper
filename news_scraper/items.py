@@ -10,3 +10,4 @@ import scrapy
 
 class NewItem(scrapy.Item):
     title = scrapy.Field()
+    description = scrapy.Field()
